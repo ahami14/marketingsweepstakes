@@ -9,15 +9,28 @@ namespace Marketing
     class Contestant
     {
         //member variables
-        string firstName;
-        string lastName;
-        string eMail;
-        string address;
-        int regNumber;
-
+        public string firstName;
+        public string lastName;
+        public string eMail;
+        public string address;
+        public int regNumber;
+        Random rng;
 
         //constructor
+        public Contestant()
+        {
+            firstName = null;
+            lastName = null;
+            eMail = null;
+            address = null;
+            regNumber = 0;
+            
+        }
 
         //member methods
+        public void RandomizeRegNumber()
+        {
+            regNumber = rng.Next(1, 1000);
+        }
     }
 }
