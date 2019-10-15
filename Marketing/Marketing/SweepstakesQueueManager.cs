@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace Marketing
 {
-    class SweepstakesQueueManager
+    class SweepstakesQueueManager : ISweepstakesManager
     {
+        //member variables
+
+        //constructor 
+
+        //member methods
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+
+        }
+       public Sweepstakes GetSweepstakes()
+        {
+
+        }
     }
 }

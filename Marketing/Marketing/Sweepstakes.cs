@@ -6,31 +6,29 @@ using System.Threading.Tasks;
 
 namespace Marketing
 {
-    class Sweepstakes
+    public class Sweepstakes
     {
         //member variables
-          //dictionary will be in this class
+        //dictionary will be in this class
+        public Dictionary<int, Contestant> contestants;
 
         //constructor
         public Sweepstakes(string name)
         {
-
+            
         }
 
         //member methods
         public void RegisterContestant(Contestant contestant)
         {
-            contestant = new Contestant();
-            Console.WriteLine("First Name:");
-            contestant.firstName = Console.ReadLine();
-            Console.WriteLine("Last Name");
-            contestant.lastName = Console.ReadLine();
-            Console.WriteLine("Email:");
-            contestant.eMail = Console.ReadLine();
-            Console.WriteLine("Address:");
-            contestant.address = Console.ReadLine();
-            contestant.RandomizeRegNumber();
-            //we can call an rng function in here to get a reg key, then log it to the dictionary when that is created
+            int countOfNewContestants = 1000000;
+
+            for (int i = 0; i < countOfNewContestants; i++)
+            {
+                Contestant contestan = new Contestant();
+                contestant.RandomizeRegNumber();
+                contestants.Add(contestant.regNumber, new Contestant());//this will be dictionary, add contestant and key
+            }
         }
 
         public Contestant PickWinner()

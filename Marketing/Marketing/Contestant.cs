@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Marketing
 {
-    class Contestant
+    public class Contestant//you need to do this like lemonade stand so you generate contestants, but you also need user input when it comes to their info
     {
         //member variables
         public string firstName;
