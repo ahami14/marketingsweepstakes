@@ -23,10 +23,13 @@ namespace Marketing
             myStack.Push("Win a boat!");
             myStack.Push("Win up to $100,000!");
             myStack.Push("Wint a trip to Europe!");
+            myStack.Push("Win a new car!");
+            myStack.Push("Win a new kitchen set!");
         }
         public Sweepstakes GetSweepstakes()
         {
-            //I think here we will pop one item for every loop so it's a new giveaway/contest
+            myStack.Pop();
+            //may potentially have a loop here so we can pop a new one everytime, needs a return
         }
     }
 }

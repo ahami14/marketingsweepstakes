@@ -10,10 +10,11 @@ namespace Marketing
     {
         //member variables
         //dictionary will be in this class
-        public Dictionary<int, Contestant> contestants;
+        private Dictionary<int, Contestant> contestants;
+        public int regNumber;
 
         //constructor
-        public Sweepstakes(string name)
+        public Sweepstakes()
         {
             
         }
@@ -31,12 +32,18 @@ namespace Marketing
             }
         }
 
-        public Contestant PickWinner()
+        public Contestant PickWinner(int regNumber, Contestant contestant)
         {
-
+            contestant.RandomizeRegNumber();
+            regNumber = contestant.regNumber;
+            return regNumber;
         }
 
         public void PrintContestantInfo(Contestant contestant)
+        {
+
+        }
+        public Sweepstakes(string name)
         {
 
         }
