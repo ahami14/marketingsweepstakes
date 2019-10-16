@@ -9,23 +9,22 @@ namespace Marketing
     class SweepstakesQueueManager : ISweepstakesManager
     {
         //member variables
-        private Queue<string> myQueue;
+        private Queue<Sweepstakes> myQueue;
 
         //constructor 
+        public SweepstakesQueueManager()
+        {
+
+        }
 
         //member methods
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            myQueue.Enqueue("Win a boat!");
-            myQueue.Enqueue("Win up to $100,000!");
-            myQueue.Enqueue("Wint a trip to Europe!");
-            myQueue.Enqueue("Win a new car!");
-            myQueue.Enqueue("Win a new kitchen set!");
+            myQueue.Enqueue(sweepstakes);
         }
        public Sweepstakes GetSweepstakes()
-        {
-            myQueue.Dequeue();
-            //same as stack manager note
+        { 
+            return myQueue.Dequeue();
         }
     }
 }

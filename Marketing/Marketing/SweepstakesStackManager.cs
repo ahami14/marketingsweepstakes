@@ -9,7 +9,8 @@ namespace Marketing
     public class SweepstakesStackManager : ISweepstakesManager
     {
         //member variables
-        private Stack<string> myStack;
+        private Stack<Sweepstakes> myStack;
+        
 
         //constructor
         public SweepstakesStackManager()
@@ -18,19 +19,13 @@ namespace Marketing
         }
 
         //member methods
-        public void InsertSweepstakes(Sweepstakes sweepstakes)//start with 3 idk what we are doin
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            myStack.Push("Win a boat!");
-            myStack.Push("Win up to $100,000!");
-            myStack.Push("Wint a trip to Europe!");
-            myStack.Push("Win a new car!");
-            myStack.Push("Win a new kitchen set!");
+            myStack.Push(sweepstakes);
         }
         public Sweepstakes GetSweepstakes()
         {
-            string Sweepstakes = myStack.Pop();
-            return Sweepstakes;
-            //may potentially have a loop here so we can pop a new one everytime, needs a return
+            return myStack.Pop();
         }
     }
 }

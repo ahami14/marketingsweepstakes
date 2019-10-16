@@ -25,7 +25,7 @@ namespace Marketing
         }
         public Sweepstakes(string name)
         {
-
+            this.name = name;
         }
 
         //member methods
