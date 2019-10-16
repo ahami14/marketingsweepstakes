@@ -14,6 +14,7 @@ namespace Marketing
         Random rng;
         public int contestRegNumber;
         public Contestant contestWinner;
+        public string name;
         
         
 
@@ -21,6 +22,10 @@ namespace Marketing
         public Sweepstakes()
         {
             
+        }
+        public Sweepstakes(string name)
+        {
+
         }
 
         //member methods
@@ -32,31 +37,36 @@ namespace Marketing
             {
                 Contestant contestan = new Contestant();
                 contestant.RandomizeRegNumber();
-                contestants.Add(contestant.regNumber, new Contestant());//this will be dictionary, add contestant and key
+                contestants.Add(contestant.regNumber, new Contestant());
             }
         }
 
-        public Contestant PickWinner(Contestant contestant)
+        public Contestant PickWinner()
         {
-            contestWinner = contestants[new Contestant()];
+            Contestant contestWinner = new Contestant();
             contestRegNumber = rng.Next(1, 1000);
-            if (contestRegNumber = contestants[contestRegNumber])//try to just reference the key
+            //if (contestRegNumber == contestants[contestRegNumber])//try to just reference the key
+            //{
+            //    return contestWinner;//should be new contestant in the dictionary being returned
+            //}
+            //else
+            //{
+            //    PickWinner();
+            //}
+            foreach (KeyValuePair<int, Contestant> contestant in contestants)
             {
-                return contestWinner;//should be new contestant in the dictionary being returned
+                if (contestRegNumber == contestant.Key)
+                {
+                    contestWinner = contestant.Value;
+                }
             }
-            else
-            {
-                PickWinner(contestant);
-            }
+            return contestWinner;
         }
 
         public void PrintContestantInfo(Contestant contestant)
         {
-
+            Console.WriteLine(contestant);
         }
-        public Sweepstakes(string name)
-        {
-
-        }
+        
     }
 }
