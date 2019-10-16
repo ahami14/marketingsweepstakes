@@ -28,7 +28,8 @@ namespace Marketing
         }
         public Sweepstakes GetSweepstakes()
         {
-            myStack.Pop();
+            string firstSweepstake = myStack.Pop();
+            return firstSweepstake;
             //may potentially have a loop here so we can pop a new one everytime, needs a return
         }
     }

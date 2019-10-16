@@ -11,7 +11,11 @@ namespace Marketing
         //member variables
         //dictionary will be in this class
         private Dictionary<int, Contestant> contestants;
-        public int regNumber;
+        Random rng;
+        public int contestRegNumber;
+        public Contestant contestWinner;
+        
+        
 
         //constructor
         public Sweepstakes()
@@ -22,7 +26,7 @@ namespace Marketing
         //member methods
         public void RegisterContestant(Contestant contestant)
         {
-            int countOfNewContestants = 1000000;
+            int countOfNewContestants = 1000;
 
             for (int i = 0; i < countOfNewContestants; i++)
             {
@@ -32,11 +36,18 @@ namespace Marketing
             }
         }
 
-        public Contestant PickWinner(int regNumber, Contestant contestant)
+        public Contestant PickWinner(Contestant contestant)
         {
-            contestant.RandomizeRegNumber();
-            regNumber = contestant.regNumber;
-            return regNumber;
+            contestWinner = contestants[new Contestant()];
+            contestRegNumber = rng.Next(1, 1000);
+            if (contestRegNumber = contestants[contestRegNumber])//try to just reference the key
+            {
+                return contestWinner;//should be new contestant in the dictionary being returned
+            }
+            else
+            {
+                PickWinner(contestant);
+            }
         }
 
         public void PrintContestantInfo(Contestant contestant)
