@@ -21,5 +21,10 @@ namespace Marketing
             Console.WriteLine("Please enter your address.");
             contestant.address = Console.ReadLine();
         }
+
+        public static void ChooseManager()
+        {
+            Console.WriteLine("Please choose whether or not you would like a queue manager for your sweepstakes objects or stack manager.");
+        }
     }
 }
