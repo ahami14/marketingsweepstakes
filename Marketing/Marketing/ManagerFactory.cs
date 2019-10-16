@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Marketing
 {
-    public class ManagerFactory
+    public class ManagerFactory 
     {
         //member variables
         SweepstakesQueueManager sweepstakesQueueManager;
