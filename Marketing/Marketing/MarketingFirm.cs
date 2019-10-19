@@ -15,7 +15,7 @@ namespace Marketing
         Contestant contestant;
 
         //constructor
-        public MarketingFirm(ISweepstakesManager sweepstakesManager)
+        public MarketingFirm()
         {
             //manager = new ManagerFactory();
             Sweepstakes sweepstakes = new Sweepstakes();

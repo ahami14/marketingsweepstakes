@@ -10,6 +10,9 @@ namespace Marketing
     {
         static void Main(string[] args)
         {
+            MarketingFirm marketingFirm = new MarketingFirm();
+            marketingFirm.runSweepstakes();
+
             ManagerFactory manager = new ManagerFactory();
             manager.ChooseManager();
         }
