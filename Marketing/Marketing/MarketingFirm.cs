@@ -15,9 +15,9 @@ namespace Marketing
         Contestant contestant;
 
         //constructor
-        public MarketingFirm()
+        public MarketingFirm(ISweepstakesManager sweepstakesManager)
         {
-            manager = new ManagerFactory();
+            //manager = new ManagerFactory();
             Sweepstakes sweepstakes = new Sweepstakes();
         }
 
@@ -25,7 +25,7 @@ namespace Marketing
         public void runSweepstakes()
         {
             UserInterface.ChooseManager();
-            manager.ChooseManager();
+            //manager.ChooseManager();
             choiceManager.GetSweepstakes();
             choiceManager.InsertSweepstakes(sweepstakes);
             UserInterface.RegContestant(contestant);

@@ -67,6 +67,13 @@ namespace Marketing
         {
             Console.WriteLine(contestant);
         }
-        
+        //private void NotifyContestants()
+        //{
+        //    foreach (KeyValuePair<int, Contestant> contestant in contestants)
+        //    {
+        //        contestant.Notify()
+        //    }
+        //}
+
     }
 }

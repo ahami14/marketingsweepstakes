@@ -32,5 +32,10 @@ namespace Marketing
         {
             regNumber = rng.Next(1, 1000);
         }
+        //public void Notify(Contestant contestant)
+        //{
+        //    Contestant contestWinner = new Contestant();
+        //    Console.WriteLine(contestWinner + " has won the sweepstakes!");
+        //}
     }
 }
